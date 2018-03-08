@@ -19,8 +19,7 @@ class CreateEtudiantsTable extends Migration
             $table->string('prenom');
             $table->string('adresse');
             $table->string('annee');
-            $table->foreign('specialite')
-                  ->references('libelle')->on('specialites');
+            $table->string('specialite');
             $table->float('moyenne')->nullable();
             $table->timestamps();
         });

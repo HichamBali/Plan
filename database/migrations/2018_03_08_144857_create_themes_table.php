@@ -18,6 +18,7 @@ class CreateThemesTable extends Migration
             $table->string('libelle');
             $table->string('description');
             $table->string('nombreBinome');
+            $table->integer('idEnseignant');
             $table->foreign('idEnseignant')
                   ->references('idEnseignant')->on('enseignants')
                   ->onDelete('cascade');

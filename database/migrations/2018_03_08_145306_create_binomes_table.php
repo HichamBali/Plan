@@ -15,6 +15,8 @@ class CreateBinomesTable extends Migration
     {
         Schema::create('binomes', function (Blueprint $table) {
             $table->increments('idBinome');
+            $table->integer('idEtudiant1');
+            $table->integer('idEtudiant2');
             $table->foreign('idEtudiant1')
                   ->references('idEtudiant')->on('etudiants')
                   ->onDelete('cascade')

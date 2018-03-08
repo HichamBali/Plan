@@ -15,6 +15,7 @@ class CreateLigneJuryTable extends Migration
     {
         Schema::create('ligneJury', function (Blueprint $table) {
             $table->increments('idjury');
+            $table->integer('idEnseignant');
             $table->foreign('idEnseignant')
                   ->references('idEnseignant')->on('enseignants')
                   ->onDelete('cascade');

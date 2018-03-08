@@ -16,6 +16,9 @@ class CreateSoutenancesTable extends Migration
         Schema::create('soutenances', function (Blueprint $table) {
             $table->increments('idSoutenance');
             $table->dateTime('tempsSoutenance');
+            $table->integer('idBinome');
+            $table->integer('idSalle');
+            $table->integer('jury');
             $table->foreign('idBinome')
                   ->references('idBinome')->on('binomes');
             $table->foreign('idSalle')

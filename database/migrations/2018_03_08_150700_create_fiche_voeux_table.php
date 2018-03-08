@@ -15,6 +15,7 @@ class CreateFicheVoeuxTable extends Migration
     {
         Schema::create('ficheVoeux', function (Blueprint $table) {
             $table->increments('idFicheVoeux');
+            $table->integer('idEtudiant');
             $table->foreign('idEtudiant')
                   ->references('idEtudiant')->on('etudiants')
                   ->onDelete('cascade');
