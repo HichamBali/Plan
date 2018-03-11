@@ -13,7 +13,7 @@ class CreateLigneJuryTable extends Migration
      */
     public function up()
     {
-        Schema::create('ligneJury', function (Blueprint $table) {
+        Schema::create('ligneJurys', function (Blueprint $table) {
             $table->increments('idjury');
             $table->integer('idEnseignant');
             $table->foreign('idEnseignant')
