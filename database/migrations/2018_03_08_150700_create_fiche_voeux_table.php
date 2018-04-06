@@ -13,7 +13,7 @@ class CreateFicheVoeuxTable extends Migration
      */
     public function up()
     {
-        Schema::create('ficheVoeux', function (Blueprint $table) {
+        Schema::create('ficheVoeuxs', function (Blueprint $table) {
             $table->increments('idFicheVoeux');
             $table->integer('idEtudiant');
             $table->foreign('idEtudiant')
