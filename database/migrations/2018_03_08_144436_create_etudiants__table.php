@@ -15,12 +15,12 @@ class CreateEtudiantsTable extends Migration
     {
         Schema::create('etudiants', function (Blueprint $table) {
             $table->increments('idEtudiant');
-            $table->string('nom');
-            $table->string('prenom');
-            $table->string('adresse');
-            $table->string('annee');
-            $table->string('specialite');
-            $table->float('moyenne')->nullable();
+            $table->string('nomEtu');
+            $table->string('prenomEtu');
+            $table->string('adresseEtu');
+            $table->string('anneeEtu');
+            $table->string('specialiteEtu');
+            $table->float('moyenneEtu')->nullable();
             $table->timestamps();
         });
     }

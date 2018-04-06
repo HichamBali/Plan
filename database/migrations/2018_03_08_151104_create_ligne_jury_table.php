@@ -17,8 +17,8 @@ class CreateLigneJuryTable extends Migration
             $table->increments('idjury');
             $table->integer('idEnseignant');
             $table->foreign('idEnseignant')
-                  ->references('idEnseignant')->on('enseignants')
-                  ->onDelete('cascade');
+                ->references('idEnseignant')->on('enseignants')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

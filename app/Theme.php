@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class themes extends Model
+class Theme extends Model
 {
     //
 }
